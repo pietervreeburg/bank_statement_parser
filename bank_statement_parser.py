@@ -1,5 +1,5 @@
 # Bank statement parser for Nadia
-# 2018_1_24
+# 2018_1_25
 
 # imports
 import os # from std. library, os interactions
@@ -11,7 +11,7 @@ import xlsxwriter # write xlsx-files
 # files and settings
 main_dir = sys.path[0]
 trans_file = 'transactions.csv'
-cats_file = 'categories.txt'
+cats_file = 'categories_setup.txt'
 
 # set-up xlsx output file
 workbook = xlsxwriter.Workbook(os.path.join(main_dir,'transactions_categorised.xlsx'))
@@ -24,20 +24,24 @@ date_format = workbook.add_format({'num_format': 'd-m-yyyy'})
 cats_dict = {}
 categories = csv.reader(open(os.path.join(main_dir, cats_file)))
 for row in categories:
-    cats_dict[row[0].strip()] = row[1].strip()
+    try:
+        skip = row[0]
+    except IndexError:
+        continue
+    if skip.startswith('#'):
+        continue
+    cats_dict[row[0].strip().lower()] = row[1].strip().lower()
 
 # read bank statement
 statement = csv.reader(open(os.path.join(main_dir, trans_file)))
+next(statement) # skip header
 for row in statement:
-    trans_date = datetime.strptime(row[7], '%Y%m%d').date()
+    trans_date = datetime.strptime(row[4], '%Y-%m-%d').date()
     trans_month = trans_date.month
     trans_date = trans_date
-    trans_counter_name = row[6]
-    trans_descr = ' '.join(row[10:16]).strip()
-    trans_amount = float(row[4])
-    trans_deb_cred = row[3]
-    if trans_deb_cred == 'C':
-        trans_amount = -trans_amount
+    trans_counter_name = row[9]
+    trans_descr = ' '.join(row[19:21]).strip()
+    trans_amount = float(row[6].replace(',', '.')) * -1
     trans = [trans_date, trans_month, trans_counter_name, trans_descr, trans_amount]
     trans_str = ';'.join(map(str, trans))
     
