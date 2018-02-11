@@ -1,5 +1,5 @@
-# Bank statement parser for Nadia
-# 2018_1_25
+# Bank statement parser (Rabobank, CSV)
+# 2018_2_11
 
 # imports
 import os # from std. library, os interactions
@@ -10,11 +10,11 @@ import xlsxwriter # write xlsx-files
 
 # files and settings
 main_dir = sys.path[0]
-trans_file = 'transactions.csv'
-cats_file = 'categories_setup.txt'
+trans_file = 'transacties.csv'
+cats_file = 'categorie_instellingen.txt'
 
 # set-up xlsx output file
-workbook = xlsxwriter.Workbook(os.path.join(main_dir,'transactions_categorised.xlsx'))
+workbook = xlsxwriter.Workbook(os.path.join(main_dir,'transacties_gecategoriseerd.xlsx'))
 worksheet = workbook.add_worksheet()
 xlsx_row = 0
 xlsx_col = 0
@@ -41,17 +41,17 @@ for row in statement:
     trans_date = trans_date
     trans_counter_name = row[9]
     trans_descr = ' '.join(row[19:21]).strip()
-    trans_amount = float(row[6].replace(',', '.')) * -1
+    trans_amount = float(row[6].replace(',', '.'))
     trans = [trans_date, trans_month, trans_counter_name, trans_descr, trans_amount]
     trans_str = ';'.join(map(str, trans))
-    
+
     # reference transaction with cats_dict
     for search_item, category in cats_dict.items():
         if trans_str.lower().find(search_item) > -1:
             cat = category
             break
     else:
-        cat = 'NO_CATEGORY'
+        cat = 'NIET_GECATEGORISEERD'
 
     # output transaction to xlsx output file
     worksheet.write_datetime(xlsx_row, xlsx_col, trans_date, date_format)
