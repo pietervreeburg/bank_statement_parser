@@ -1,0 +1,51 @@
+# FORMAT: zoekstring, categorie
+# LET OP: geen comma's (,) gebruiken in zoekstring
+# LET OP: balans tussen generiek en specifiek in zoekstring
+
+97-txf-6, wegenbelasting
+albert heijn, boodschappen
+ammerlaan, boodschappen
+anwb, anwb
+automatic data processing, salaris pieter
+boksvereniging, sport
+boodschappen, boodschappen
+de vos, oppas
+debetrente, bankkosten
+dunea, waterlevering
+duo hoofdrekening, schuldaflossing
+dyehard, persoonlijke verzorging
+etos, persoonlijke verzorging
+fbto, autoverzekering
+geldautomaat, OVERSLAAN
+gem rdam serviceorg, salaris nadia
+gimsel, boodschappen
+glazenwasser, glazenwasser
+hollandsnieuwe, televisie en telefoon
+ikea, inrichting
+interpolis, verzekeringen (overig)
+jumbo, boodschappen
+kapper, persoonlijke verzorging
+kosten extra rabo, bankkosten
+kosten rabo direct, bankkosten
+netflix, televisie en telefoon
+overlijdensrisicoverzekering, levensverzekering
+parkeren, parkeren
+parking, parkeren
+parkmobile, parkeren
+rbg, waterschap
+simyo, televisie en telefoon
+sparen, sparen
+spirit, uit eten
+stadhuis rotterdam, openbaar vervoer
+stichting kinderspeel, kinderopvang
+svhw heffingen, gemeentebelastingen
+t-mobile, televisie en telefoon
+termijnbetaling hypotheek, hypotheek
+tinq, brandstof
+trekpleister, boodschappen
+vandebron, energie
+westpolder, openbaar vervoer
+yoga, sport
+zakgeld, zakgeld
+zelf nl, verzekeringen (overig)
+zilveren kruis, ziektekostenverzekering
