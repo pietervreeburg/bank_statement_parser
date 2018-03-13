@@ -1,5 +1,5 @@
 # Bank statement parser (Rabobank, CSV)
-# 2018_2_11
+# 2018_2_16
 
 # imports
 import os # from std. library, os interactions
@@ -22,7 +22,7 @@ date_format = workbook.add_format({'num_format': 'd-m-yyyy'})
 
 # create cats_dict
 cats_dict = {}
-categories = csv.reader(open(os.path.join(main_dir, cats_file)))
+categories = csv.reader(open(os.path.join(main_dir, cats_file)), delimiter = ',')
 for row in categories:
     try:
         skip = row[0]

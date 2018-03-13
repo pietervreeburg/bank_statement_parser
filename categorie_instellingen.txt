@@ -7,6 +7,7 @@ albert heijn, boodschappen
 ammerlaan, boodschappen
 anwb, anwb
 automatic data processing, salaris pieter
+avia, brandstof
 boksvereniging, sport
 boodschappen, boodschappen
 de vos, oppas
@@ -27,6 +28,7 @@ jumbo, boodschappen
 kapper, persoonlijke verzorging
 kosten extra rabo, bankkosten
 kosten rabo direct, bankkosten
+lidl, boodschappen
 netflix, televisie en telefoon
 overlijdensrisicoverzekering, levensverzekering
 parkeren, parkeren
@@ -34,6 +36,8 @@ parking, parkeren
 parkmobile, parkeren
 rbg, waterschap
 simyo, televisie en telefoon
+sociale verzekeringsbank, kinderbijslag
+spar, boodschappen
 sparen, sparen
 spirit, uit eten
 stadhuis rotterdam, openbaar vervoer
@@ -44,8 +48,9 @@ termijnbetaling hypotheek, hypotheek
 tinq, brandstof
 trekpleister, boodschappen
 vandebron, energie
+voorschot kinderopvang, kinderopvang
 westpolder, openbaar vervoer
 yoga, sport
 zakgeld, zakgeld
-zelf nl, verzekeringen (overig)
+zelf nl, reisverzekering
 zilveren kruis, ziektekostenverzekering
